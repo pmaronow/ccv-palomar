@@ -29,7 +29,8 @@ not establish Palomar registration, editorial acceptance, or human review.
 - Challenge's transitive imports are restricted to Lean core and authenticated
   canonical Mathlib, Tau Ceti, or CSLib with their exact pinned manifest
   closures. Project-specific statement imports are forbidden. This Challenge
-  imports Mathlib and defines its statistical model concretely.
+  imports Mathlib and a Lean-core auxiliary-lemma cache utility, and defines its
+  statistical model concretely.
 - Challenge and Solution are distinct modules. Comparator compares the
   declarations listed in `comparator.json` and the ordinary declaration
   dependencies of their types. Empty `definition_names` means the statistical

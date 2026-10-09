@@ -38,7 +38,7 @@ factor, while leaving the precise logarithmic power unresolved.
 | Theorem 1.4: `n^(-1/2)` for `s > 1`, `d ≤ 4s`, every `n ≥ 1` | `parametric` |
 
 [Challenge.lean](Challenge.lean) is the independent statement interface. It
-imports Mathlib alone, provides concrete model, loss and rate definitions, and
+imports Mathlib and Lean core, provides concrete model, loss and rate definitions, and
 contains five intentional theorem `sorry` placeholders.
 [Solution.lean](Solution.lean) supplies the corresponding proofs.
 [comparator.json](comparator.json) selects all five statements with no

@@ -6,7 +6,7 @@ The paper is *Nearly Minimax Variance Estimation Under Rough Random Design*, by 
 
 ## Selected results
 
-[Challenge.lean](../Challenge.lean) gives concrete definitions and five independently readable statement targets using Mathlib alone. Its theorem `sorry` placeholders are intentional. [Solution.lean](../Solution.lean) repeats the statements and supplies proofs using the substantive development. The table identifies the original endpoints used by Solution and the corresponding paper results.
+[Challenge.lean](../Challenge.lean) gives concrete definitions and five independently readable statement targets using Mathlib and Lean core. Its theorem `sorry` placeholders are intentional. [Solution.lean](../Solution.lean) repeats the statements and supplies proofs using the substantive development. The table identifies the original endpoints used by Solution and the corresponding paper results.
 
 | Paper result | Original endpoint | Correspondence |
 | --- | --- | --- |

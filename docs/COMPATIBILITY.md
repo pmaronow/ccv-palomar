@@ -22,6 +22,15 @@ it imports Solution and includes its declarations in the transitive axiom
 inventory. Challenge and Solution are new interface modules.
 
 The complete development retains its original names and library structure.
+Challenge resets Lean's auxiliary-lemma naming cache at the boundaries
+between its copied Model, Rates and PaperGoals definitions. The original
+definitions were compiled in separate modules; merging them into one small
+statement module otherwise changes names of generated numeral proofs. The
+resets use the Lean-core `Lean.Meta.Tactic.AuxLemma` utility and affect
+elaboration names, without changing any mathematical expression, axiom,
+or proof hole. Strict Comparator comparison still checks all concrete
+definition bodies.
+
 Compiler warnings about deprecated tactic names or unused arguments remain
 visible during builds; they are separate from errors or proof holes. The
 revision-specific build result is in [VERIFICATION.md](VERIFICATION.md).

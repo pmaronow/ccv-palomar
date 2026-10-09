@@ -1,6 +1,7 @@
 module
 
 public import Mathlib
+public meta import Lean.Meta.Tactic.AuxLemma
 
 @[expose] public section
 
@@ -9,9 +10,13 @@ public import Mathlib
 
 This module states Theorem 1.1, both conclusions of Corollary 1.2,
 Theorem 1.3, and Theorem 1.4 of the accompanying paper. It imports only
-Mathlib and gives the statistical model, loss, and rate scales concretely.
+Mathlib and Lean core and gives the statistical model, loss, and rate scales concretely.
 The five theorem placeholders are intentional; their proved counterparts
 are in `Solution.lean`.
+
+The two auxiliary-proof-cache resets below reproduce the original module boundaries
+when generating auxiliary proofs for numeric literals. They preserve the
+exact exported declaration names and have no mathematical effect.
 
 Observations are independent copies of `(X, f(X) + error)` on the unit
 cube. The design density is unknown. The errors may depend on `X`, have
@@ -164,6 +169,9 @@ def minimaxRisk {d : ℕ} (C : ModelConstants d) (n : ℕ) : ℝ≥0∞ :=
 def minimaxRMS {d : ℕ} (C : ModelConstants d) (n : ℕ) : ℝ≥0∞ :=
   (minimaxRisk C n) ^ (1 / 2 : ℝ)
 
+-- Begin the definitions originally compiled in the Rates module.
+run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+
 /-- The root-mean-square polynomial exponent. -/
 def rateExponent (s d : ℝ) : ℝ := 2 * (s + 1) / (d + 4)
 
@@ -173,6 +181,9 @@ def lowerLogPower (s d : ℝ) : ℝ := (s - 1) / (d + 4)
 /-- The common stretched-exponential constant in the paper. -/
 def stretchConstant (s d τ : ℝ) : ℝ :=
   4 * Real.sqrt (2 * τ * (s - 1) * (d - 4 * s) / (d + 4) ^ 3)
+
+-- Begin the definitions originally compiled in the PaperGoals module.
+run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
 
 /-- Only the open extension domain varies; the numerical model constants stay fixed. -/
 structure ExtensionDomain (d : ℕ) where
