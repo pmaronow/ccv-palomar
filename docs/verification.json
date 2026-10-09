@@ -1,0 +1,186 @@
+{
+  "schema": "nearly-minimax-verification-v1",
+  "status": "passed",
+  "scope": "Local checks of the pinned proof and submission inputs; no hosted Palomar workflow or human mathematical review.",
+  "verified_git_revision": "88fdec862ee895fd9f32aee4ed33fa295c6b5a19",
+  "input_sha256": "5ce07cc565f852c56589b6e9cdb1e70b30e5a4a3e3488b26a5a557c02decffca",
+  "input_manifest": "verification-inputs.json",
+  "input_file_count": 663,
+  "checked_at_utc": "2026-10-09T03:17:36.453816+00:00",
+  "inputs_unchanged_during_verification": true,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "tool_sha256": {
+    "lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "leanexport": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954",
+    "leanchecker": "9e36e955a251b1313c8eb5b7fa101282d51df109d34d8bb7c1cfdf51985aba29",
+    "nanoda_bin": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8",
+    "con-ron": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef"
+  },
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "checks": {
+    "compatibility": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "preflight": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "build": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "axioms": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "comparator": {
+      "passed": true,
+      "exit_code": 0
+    },
+    "paper": {
+      "passed": true,
+      "exit_code": 0
+    }
+  },
+  "preflight_checks": [
+    {
+      "name": "formalization_metadata_and_community_v04_schema",
+      "status": "passed"
+    },
+    {
+      "name": "comparator_config",
+      "status": "passed"
+    },
+    {
+      "name": "source_structure",
+      "status": "passed"
+    },
+    {
+      "name": "root_license_spdx",
+      "status": "passed"
+    },
+    {
+      "name": "source_headers_and_line_limits",
+      "status": "passed"
+    },
+    {
+      "name": "dependency_pins_canonical_mathlib_and_toolchain",
+      "status": "passed"
+    },
+    {
+      "name": "lean_module_header_parser_and_bundled_tools",
+      "status": "passed"
+    },
+    {
+      "name": "challenge_transitive_imports_and_source_limits",
+      "status": "passed"
+    }
+  ],
+  "source_limits": {
+    "lean_files_checked": 645,
+    "challenge_lines": 272,
+    "challenge_bytes": 12159,
+    "largest_lean_lines": 1213,
+    "pinned_git_packages": 9,
+    "challenge_import_source_count": 10764,
+    "untrusted_challenge_imports": 0
+  },
+  "compatibility": {
+    "original_mathematical_files": 642,
+    "exact_bodies_preserved": true,
+    "allowed_changes": "Module header, public import and exposure additions only."
+  },
+  "axiom_audit": {
+    "project_module_count": 643,
+    "declaration_count": 10858,
+    "theorem_count": 8839,
+    "private_declaration_count": 2100,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "nearly_minimax_module_count": 613,
+    "nearly_minimax_theorem_count": 8057,
+    "vendored_module_count": 30,
+    "vendored_theorem_count": 782
+  },
+  "explicit_private_source_declarations": {
+    "count": 64,
+    "all_present": true
+  },
+  "selected_transitive_axioms": {
+    "NearlyMinimax.Submission.paper_main": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NearlyMinimax.Submission.exponent_limit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NearlyMinimax.Submission.polynomial_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NearlyMinimax.Submission.low_smoothness": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NearlyMinimax.Submission.parametric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "proof_holes": {
+    "solution_and_original_development": 0,
+    "intentional_challenge_theorems": 5,
+    "challenge_definition_holes": 0
+  },
+  "comparator": {
+    "exit_code": 0,
+    "strict_statement_and_definition_comparison": "passed",
+    "kernel_acceptance": {
+      "con-ron": true,
+      "nanoda": true,
+      "leanchecker": true
+    },
+    "source_unchanged": true,
+    "con_ron_declarations_accepted": 80690,
+    "con_ron_arguments": [
+      "--jobs=2"
+    ]
+  },
+  "numbered_coverage": {
+    "paper_blocks": 32,
+    "endpoint_references": 145,
+    "distinct_endpoint_theorems": 133,
+    "all_endpoint_theorems_in_axiom_inventory": true,
+    "complete_literal_paper_coverage_certified": false
+  },
+  "palomar_requirement_sources": {
+    "PalomarSubmission": {
+      "url": "https://github.com/PalomarRegistry/PalomarSubmission",
+      "commit": "d4e41c1d5b0d114c4859e6e5831dc6d3ad1d0d44"
+    },
+    "formalization.yaml": {
+      "url": "https://github.com/mathlib-initiative/formalization.yaml",
+      "commit": "99c678e569c7c4c0772db297c5ddd5e4c9b6322e"
+    }
+  },
+  "limitations": [
+    "Kernel acceptance checks formal proofs, not their correspondence with informal mathematics.",
+    "Review of mathematical fidelity is automated; no human mathematical review is established.",
+    "Low-smoothness and parametric constants are chosen for a fixed extension domain; uniformity over all extension domains is not separately certified.",
+    "Auxiliary coverage includes conditional infrastructure, component results and alternative proof routes, not a literal full-paper equivalence certification.",
+    "The exact logarithmic power, optimized constants and moderate-sample performance remain outside the proved conclusions.",
+    "The hosted canonical-Challenge isolation, Palomar editorial review, publication, submission and registration were not run."
+  ]
+}
