@@ -1,0 +1,1093 @@
+{
+  "schema": "nearly-minimax-coverage-v3",
+  "description": "Numbered mathematical inventory and automated source-level scope comparison. Endpoint existence and mechanical proof verification are distinct from complete literal statement correspondence.",
+  "primary_numbered_blocks": 32,
+  "complete_literal_paper_coverage_certified": false,
+  "review_method": "Automated source and statement comparison; no human mathematical review is asserted. Scope details are in docs/COVERAGE.md and docs/FIDELITY.md; mechanical evidence is separately recorded in docs/VERIFICATION.md.",
+  "selected_submission_targets": [
+    "NearlyMinimax.Submission.paper_main",
+    "NearlyMinimax.Submission.exponent_limit",
+    "NearlyMinimax.Submission.polynomial_bounds",
+    "NearlyMinimax.Submission.low_smoothness",
+    "NearlyMinimax.Submission.parametric"
+  ],
+  "results": [
+    {
+      "paper_number": "1.1",
+      "paper_label": "thm:main",
+      "title": "Minimax bracket with a logarithmic gap",
+      "source_file": "paper/body.tex",
+      "source_line": 230,
+      "scope_label": "Selected exact target",
+      "scope_notes": "Selected exact target. RMS risk in the original model, `s>1`, `d>4s`, exact polynomial exponent, density-ratio parameter, stretched-exponential constant and logarithmic powers. Positive constants and threshold precede every extension domain and sample size.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperMain.lean",
+          "declaration": "paper_main",
+          "qualified_declaration": "NearlyMinimax.paper_main"
+        }
+      ]
+    },
+    {
+      "paper_number": "1.2",
+      "paper_label": "thm:exponent",
+      "title": "Minimax exponent corollary",
+      "source_file": "paper/body.tex",
+      "source_line": 281,
+      "scope_label": "Selected exact targets",
+      "scope_notes": "Selected exact targets. Both follow from the proved main bracket. Polynomial constants precede every positive epsilon; the eventual threshold can depend on epsilon. The additional stretch limit, logarithmic expansion and normalized-risk limit are proved consequences, not additional numbered paper blocks.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperMain.lean",
+          "declaration": "paper_exponent_limit",
+          "qualified_declaration": "NearlyMinimax.paper_exponent_limit"
+        },
+        {
+          "module": "NearlyMinimax/PaperMain.lean",
+          "declaration": "paper_polynomial_bounds",
+          "qualified_declaration": "NearlyMinimax.paper_polynomial_bounds"
+        },
+        {
+          "module": "NearlyMinimax/PaperMain.lean",
+          "declaration": "paper_stretch_limit",
+          "qualified_declaration": "NearlyMinimax.paper_stretch_limit"
+        },
+        {
+          "module": "NearlyMinimax/PaperMain.lean",
+          "declaration": "paper_log_expansion",
+          "qualified_declaration": "NearlyMinimax.paper_log_expansion"
+        },
+        {
+          "module": "NearlyMinimax/PaperMain.lean",
+          "declaration": "paper_normalized_risk_tends_zero",
+          "qualified_declaration": "NearlyMinimax.paper_normalized_risk_tends_zero"
+        }
+      ]
+    },
+    {
+      "paper_number": "1.3",
+      "paper_label": "thm:main2",
+      "title": "Exact minimax rate for 0<s<=1",
+      "source_file": "paper/body.tex",
+      "source_line": 332,
+      "scope_label": "Selected exact fixed-domain target",
+      "scope_notes": "Selected exact fixed-domain target. Common reciprocal constant for `max(n^(-1/2), n^(-4s/(d+4s)))`, all `n≥1`, `0<s≤1`, and positive integer dimension. Includes `s=1`, `n=1` and `d=4s`. Its constant is chosen after the fixed model, including its extension domain; a single constant quantified before all extension domains is not separately asserted.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperLowSmoothness.lean",
+          "declaration": "paper_low_smoothness",
+          "qualified_declaration": "NearlyMinimax.paper_low_smoothness"
+        }
+      ]
+    },
+    {
+      "paper_number": "1.4",
+      "paper_label": "thm:parametric",
+      "title": "Exact parametric rate for s>1,d<=4s",
+      "source_file": "paper/body.tex",
+      "source_line": 345,
+      "scope_label": "Selected exact fixed-domain target",
+      "scope_notes": "Selected exact fixed-domain target. Common reciprocal root-n constant, all `n≥1`, `s>1`, `d≤4s`, including the critical dimension. The same domain-quantifier limitation as 1.3 applies.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperParametric.lean",
+          "declaration": "paper_parametric",
+          "qualified_declaration": "NearlyMinimax.paper_parametric"
+        }
+      ]
+    },
+    {
+      "paper_number": "2.1",
+      "paper_label": "prop:elementary-upper",
+      "title": "Elementary upper rates in every regime",
+      "source_file": "paper/body.tex",
+      "source_line": 851,
+      "scope_label": "Quantitative target",
+      "scope_notes": "Quantitative target. Actual measurable estimators for all `n≥1`, full piecewise exponent with `t=min(s,1)`, constant before all extension domains.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperElementaryUpper.lean",
+          "declaration": "paper_elementary_upper",
+          "qualified_declaration": "NearlyMinimax.paper_elementary_upper"
+        }
+      ]
+    },
+    {
+      "paper_number": "2.2",
+      "paper_label": "lem:projection-upper",
+      "title": "Uniform residual-projection upper bound",
+      "source_file": "paper/body.tex",
+      "source_line": 885,
+      "scope_label": "Quantitative target",
+      "scope_notes": "Quantitative target. Actual clipped Borel estimator and sum-form L2 risk for all `n≥1`, uniformly over domains. A rectangular monomial basis replaces the total-degree basis, enlarging only a fixed model-dependent feature count and constant.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperParametric.lean",
+          "declaration": "paper_projection_upper",
+          "qualified_declaration": "NearlyMinimax.paper_projection_upper"
+        }
+      ]
+    },
+    {
+      "paper_number": "2.3",
+      "paper_label": "prop:pair-risk",
+      "title": "Common independent affine pair-pilot risk",
+      "source_file": "paper/body.tex",
+      "source_line": 988,
+      "scope_label": "Conditional target",
+      "scope_notes": "Conditional target. Explicit primitive pilot moment and localization assumptions, independent pilot/evaluation laws, sample fractions and floor guards. Response coordinates are allowed to be unbounded with the required finite moments. Product pilot measures realize independence. The special floor is derived; the general floor version assumes the actual mean guard.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperPairRisk.lean",
+          "declaration": "paper_common_pair_rms",
+          "qualified_declaration": "NearlyMinimax.paper_common_pair_rms"
+        },
+        {
+          "module": "NearlyMinimax/PaperPairRisk.lean",
+          "declaration": "paper_common_pair_rms_of_floor",
+          "qualified_declaration": "NearlyMinimax.paper_common_pair_rms_of_floor"
+        }
+      ]
+    },
+    {
+      "paper_number": "3.1",
+      "paper_label": "thm:upper-sharp",
+      "title": "Upper bound with the identified kappa",
+      "source_file": "paper/body.tex",
+      "source_line": 1190,
+      "scope_label": "Quantitative target",
+      "scope_notes": "Quantitative target. The first theorem constructs a measurable estimator and bounds its actual worst-case risk; the second takes the minimax infimum. Constants and threshold precede extension domains.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperSharpUpper.lean",
+          "declaration": "paper_upper_sharp_estimator",
+          "qualified_declaration": "NearlyMinimax.paper_upper_sharp_estimator"
+        },
+        {
+          "module": "NearlyMinimax/PaperSharpUpper.lean",
+          "declaration": "paper_upper_sharp",
+          "qualified_declaration": "NearlyMinimax.paper_upper_sharp"
+        }
+      ]
+    },
+    {
+      "paper_number": "3.2",
+      "paper_label": "lem:U1",
+      "title": "Anchored monomial features and spectral similarity",
+      "source_file": "paper/body.tex",
+      "source_line": 1377,
+      "scope_label": "Quantitative component targets",
+      "scope_notes": "Quantitative component targets. Concrete monomial Gram matrices and similarity transport. Nonempty feature hypotheses are satisfied in the paper's positive-dimensional high-smoothness regime.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/AnchoredGramBounds.lean",
+          "declaration": "anchoredGram_uniform_bounds",
+          "qualified_declaration": "NearlyMinimax.anchoredGram_uniform_bounds"
+        },
+        {
+          "module": "NearlyMinimax/AnchoredGramBounds.lean",
+          "declaration": "anchoredDensityGram_sandwich",
+          "qualified_declaration": "NearlyMinimax.anchoredDensityGram_sandwich"
+        },
+        {
+          "module": "NearlyMinimax/DyadicGram.lean",
+          "declaration": "dyadicSimilarityUnit_uniform_condition",
+          "qualified_declaration": "NearlyMinimax.dyadicSimilarityUnit_uniform_condition"
+        }
+      ]
+    },
+    {
+      "paper_number": "3.3",
+      "paper_label": "lem:U2",
+      "title": "Population-fit error, increment decay and telescoping",
+      "source_file": "paper/body.tex",
+      "source_line": 1471,
+      "scope_label": "Quantitative target",
+      "scope_notes": "Quantitative target. Actual model-derived spatial fit error, increment decay and finite telescoping; no desired approximation or risk conclusion is a premise.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperPopulationFit.lean",
+          "declaration": "paper_population_fit",
+          "qualified_declaration": "NearlyMinimax.paper_population_fit"
+        }
+      ]
+    },
+    {
+      "paper_number": "3.4",
+      "paper_label": "lem:U5",
+      "title": "Degree-uniform increment polynomial guarantees",
+      "source_file": "paper/body.tex",
+      "source_line": 1573,
+      "scope_label": "Components",
+      "scope_notes": "Components. Concrete polynomial and error declarations exist. Generic matrix spectral/complex-neighborhood guards are conditional analytic infrastructure, followed by actual population specialization. The entire multi-clause paper statement is distributed across declarations.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperIncrement.lean",
+          "declaration": "incrementEntryPolynomial_degree",
+          "qualified_declaration": "NearlyMinimax.incrementEntryPolynomial_degree"
+        },
+        {
+          "module": "NearlyMinimax/PaperIncrement.lean",
+          "declaration": "incrementEntryPolynomial_vector_monomial",
+          "qualified_declaration": "NearlyMinimax.incrementEntryPolynomial_vector_monomial"
+        },
+        {
+          "module": "NearlyMinimax/PaperIncrement.lean",
+          "declaration": "incrementEntryPolynomial_affine",
+          "qualified_declaration": "NearlyMinimax.incrementEntryPolynomial_affine"
+        },
+        {
+          "module": "NearlyMinimax/SimilarInverseDerivatives.lean",
+          "declaration": "actual_similar_increment_derivative_bound",
+          "qualified_declaration": "NearlyMinimax.actual_similar_increment_derivative_bound"
+        },
+        {
+          "module": "NearlyMinimax/PopulationMomentDerivatives.lean",
+          "declaration": "anchored_actual_population_inverse_derivatives",
+          "qualified_declaration": "NearlyMinimax.anchored_actual_population_inverse_derivatives"
+        },
+        {
+          "module": "NearlyMinimax/PaperInverse.lean",
+          "declaration": "incrementNumerator_identity",
+          "qualified_declaration": "NearlyMinimax.incrementNumerator_identity"
+        },
+        {
+          "module": "NearlyMinimax/PaperInverse.lean",
+          "declaration": "incrementNumerator_factorization",
+          "qualified_declaration": "NearlyMinimax.incrementNumerator_factorization"
+        },
+        {
+          "module": "NearlyMinimax/PaperInverse.lean",
+          "declaration": "increment_polynomial_error",
+          "qualified_declaration": "NearlyMinimax.increment_polynomial_error"
+        },
+        {
+          "module": "NearlyMinimax/PaperIncrement.lean",
+          "declaration": "incrementEntryPolynomial_error",
+          "qualified_declaration": "NearlyMinimax.incrementEntryPolynomial_error"
+        }
+      ]
+    },
+    {
+      "paper_number": "3.5",
+      "paper_label": "lem:U6",
+      "title": "Centered Taylor identity and variance localization",
+      "source_file": "paper/body.tex",
+      "source_line": 1724,
+      "scope_label": "Conditional quantitative targets",
+      "scope_notes": "Conditional quantitative targets. Actual field-integral estimates under finite measure, L2 test and kernel hypotheses. Feature maps/dimensions can vary with the field point; no coefficient-norm integrability is imposed. The generic observation sigma algebra is countably generated, automatic for the paper's standard Borel observation domain. Arbitrary measurable spaces without this qualification are not covered.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PolynomialLiftField.lean",
+          "declaration": "PolynomialField.integrated_centered_energy_le_raw",
+          "qualified_declaration": "NearlyMinimax.RawLiftHilbert.PolynomialField.integrated_centered_energy_le_raw"
+        },
+        {
+          "module": "NearlyMinimax/PolynomialLiftFieldRawLocalization.lean",
+          "declaration": "PolynomialField.integrated_raw_energy_localized",
+          "qualified_declaration": "NearlyMinimax.RawLiftHilbert.PolynomialField.integrated_raw_energy_localized"
+        },
+        {
+          "module": "NearlyMinimax/PolynomialLiftField.lean",
+          "declaration": "PolynomialField.integrated_centered_energy_localized",
+          "qualified_declaration": "NearlyMinimax.RawLiftHilbert.PolynomialField.integrated_centered_energy_localized"
+        }
+      ]
+    },
+    {
+      "paper_number": "3.6",
+      "paper_label": "lem:U7",
+      "title": "Polynomial-pilot means, fluctuations and master risk",
+      "source_file": "paper/body.tex",
+      "source_line": 2004,
+      "scope_label": "Components",
+      "scope_notes": "Components. Actual weak-test fluctuations and joint measurability under primitive allocation admissibility. The listed endpoints do not alone combine every pilot proposition clause; the final upper-risk proof also uses the common pair bound.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/DyadicPilotMultilevel.lean",
+          "declaration": "admissible_dyadicMultilevelErrorField_test_second",
+          "qualified_declaration": "NearlyMinimax.admissible_dyadicMultilevelErrorField_test_second"
+        },
+        {
+          "module": "NearlyMinimax/DyadicPilotMultilevel.lean",
+          "declaration": "dyadicMultilevelErrorField_joint_measurable",
+          "qualified_declaration": "NearlyMinimax.dyadicMultilevelErrorField_joint_measurable"
+        }
+      ]
+    },
+    {
+      "paper_number": "3.7",
+      "paper_label": "lem:U12",
+      "title": "One allocation for admissibility, bias, variance and rate",
+      "source_file": "paper/body.tex",
+      "source_line": 2113,
+      "scope_label": "Components",
+      "scope_notes": "Components. Rounded allocation, eventual admissibility/noise/variance and bias budgets, assembled by the sharp upper proof. Individual budget endpoints are not each the complete numbered allocation lemma.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperSeriesAllocation.lean",
+          "declaration": "eventually_paper_dyadic_series_envelope_bound",
+          "qualified_declaration": "NearlyMinimax.eventually_paper_dyadic_series_envelope_bound"
+        },
+        {
+          "module": "NearlyMinimax/UpperRiskAllocation.lean",
+          "declaration": "eventually_paper_allocated_root_noise_bound",
+          "qualified_declaration": "NearlyMinimax.eventually_paper_allocated_root_noise_bound"
+        },
+        {
+          "module": "NearlyMinimax/UpperRiskAllocation.lean",
+          "declaration": "paper_allocated_bias_square_bound",
+          "qualified_declaration": "NearlyMinimax.paper_allocated_bias_square_bound"
+        }
+      ]
+    },
+    {
+      "paper_number": "4.1",
+      "paper_label": "lem:path-risk",
+      "title": "Score-to-risk comparison for mixture paths",
+      "source_file": "paper/body.tex",
+      "source_line": 2288,
+      "scope_label": "Conditional target",
+      "scope_notes": "Conditional target. Actual Markov sample laws, variance path in the original interval, exceptional mass, centered square-integrable score, absolute continuity and derivative identity. The original interval-width penalty is retained. Differentiation for bounded estimators used by clipping suffices for the risk conclusion.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperScorePathOriginal.lean",
+          "declaration": "paper_score_to_risk_original_interval",
+          "qualified_declaration": "NearlyMinimax.paper_score_to_risk_original_interval"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.1",
+      "paper_label": "thm:lower",
+      "title": "Lower bound with the identified kappa",
+      "source_file": "paper/body.tex",
+      "source_line": 2525,
+      "scope_label": "Quantitative target",
+      "scope_notes": "Quantitative target. Actual original-model minimax risk; no prior-existence, spatial-energy, assumed-risk or minimax-bracket premise. The proof constructs the necessary source, geometry, path and exceptional-tail witnesses. Constants and threshold precede extension domains.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperLowerSharp.lean",
+          "declaration": "paper_lower_sharp",
+          "qualified_declaration": "NearlyMinimax.paper_lower_sharp"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.2",
+      "paper_label": "lem:legality",
+      "title": "Legality and normalized density margins",
+      "source_file": "paper/body.tex",
+      "source_line": 2675,
+      "scope_label": "Quantitative legality components",
+      "scope_notes": "Quantitative legality components. The intrinsic paper frame constant and coefficient ball give global original Hölder norm bounds. Actual normalized ternary parameters are admissible at `eta0=rho/2^(d+1)`, under the stated raw density/mass/amplitude guards, uniformly over extension domains.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/HighFrameLegality.lean",
+          "declaration": "highFrameField_original_model_bounds",
+          "qualified_declaration": "NearlyMinimax.highFrameField_original_model_bounds"
+        },
+        {
+          "module": "NearlyMinimax/HighFrameLegality.lean",
+          "declaration": "highFrame_normalized_parameter_admissible",
+          "qualified_declaration": "NearlyMinimax.highFrame_normalized_parameter_admissible"
+        },
+        {
+          "module": "NearlyMinimax/HighUnionSourceUniformModel.lean",
+          "declaration": "highUnionSource_original_model_uniform",
+          "qualified_declaration": "NearlyMinimax.highUnionSource_original_model_uniform"
+        },
+        {
+          "module": "NearlyMinimax/HighIntrinsicFrame.lean",
+          "declaration": "highFrameProfile_intrinsic_ball_norm",
+          "qualified_declaration": "NearlyMinimax.highFrameProfile_intrinsic_ball_norm"
+        },
+        {
+          "module": "NearlyMinimax/HighIntrinsicFieldLegality.lean",
+          "declaration": "highFrameField_intrinsic_original_model_bounds",
+          "qualified_declaration": "NearlyMinimax.highFrameField_intrinsic_original_model_bounds"
+        },
+        {
+          "module": "NearlyMinimax/HighIntrinsicNormalizedLegality.lean",
+          "declaration": "highFrame_intrinsic_normalized_parameter_admissible",
+          "qualified_declaration": "NearlyMinimax.highFrame_intrinsic_normalized_parameter_admissible"
+        },
+        {
+          "module": "NearlyMinimax/SourceIntrinsicNormalizedLegality.lean",
+          "declaration": "highFrame_intrinsic_source_cap_admissible",
+          "qualified_declaration": "NearlyMinimax.highFrame_intrinsic_source_cap_admissible"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.3",
+      "paper_label": "lem:interp",
+      "title": "Separated cardinal interpolation and all three estimates",
+      "source_file": "paper/body.tex",
+      "source_line": 2772,
+      "scope_label": "Components, with an adapted band representation",
+      "scope_notes": "Components, with an adapted band representation. Actual symmetric/permutation-invariant continuous matrices, exact diagonal weights in [0,1], monotonicity, separated costs and band-square estimates. Bands use two positive tagged copies with opposite amplitudes; a factor 2 is absorbed in a fixed constant. Below-one cutoff identities supply empty scales. The paper's linear integrated deficit target has complementary-tail components in CardinalInterpolationBias; the exported global squared-deficit bound alone is not that target. No single declaration choosing simultaneous paper constants `C_A,C_I` was independently checked.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/IntegratedCardinalCovariance.lean",
+          "declaration": "integrated_cardinal_matrix_symmetric",
+          "qualified_declaration": "NearlyMinimax.integrated_cardinal_matrix_symmetric"
+        },
+        {
+          "module": "NearlyMinimax/IntegratedCardinalCovariance.lean",
+          "declaration": "integrated_cardinal_matrix_diagonal",
+          "qualified_declaration": "NearlyMinimax.integrated_cardinal_matrix_diagonal"
+        },
+        {
+          "module": "NearlyMinimax/IntegratedCardinalCovariance.lean",
+          "declaration": "integrated_cardinal_response_heat",
+          "qualified_declaration": "NearlyMinimax.integrated_cardinal_response_heat"
+        },
+        {
+          "module": "NearlyMinimax/GaussianTensorCost.lean",
+          "declaration": "gaussianTensorSymmetricAmplitude_integrated_cost",
+          "qualified_declaration": "NearlyMinimax.gaussianTensorSymmetricAmplitude_integrated_cost"
+        },
+        {
+          "module": "NearlyMinimax/CardinalPermutation.lean",
+          "declaration": "integrated_cardinal_matrix_perm",
+          "qualified_declaration": "NearlyMinimax.integrated_cardinal_matrix_perm"
+        },
+        {
+          "module": "NearlyMinimax/CardinalIntegratedContinuity.lean",
+          "declaration": "integrated_cardinal_matrix_continuous",
+          "qualified_declaration": "NearlyMinimax.integrated_cardinal_matrix_continuous"
+        },
+        {
+          "module": "NearlyMinimax/CardinalIntegratedContinuity.lean",
+          "declaration": "integrated_cardinal_weight_continuous",
+          "qualified_declaration": "NearlyMinimax.integrated_cardinal_weight_continuous"
+        },
+        {
+          "module": "NearlyMinimax/CardinalScaleWeights.lean",
+          "declaration": "integrated_cardinal_weight_mem_unit",
+          "qualified_declaration": "NearlyMinimax.integrated_cardinal_weight_mem_unit"
+        },
+        {
+          "module": "NearlyMinimax/CardinalScaleWeights.lean",
+          "declaration": "integrated_cardinal_weight_mono",
+          "qualified_declaration": "NearlyMinimax.integrated_cardinal_weight_mono"
+        },
+        {
+          "module": "NearlyMinimax/CardinalSeparatedBand.lean",
+          "declaration": "cardinal_band_cost_integral_le",
+          "qualified_declaration": "NearlyMinimax.cardinal_band_cost_integral_le"
+        },
+        {
+          "module": "NearlyMinimax/CardinalSeparatedBand.lean",
+          "declaration": "integrated_cardinal_actual_band_separated_exact",
+          "qualified_declaration": "NearlyMinimax.integrated_cardinal_actual_band_separated_exact"
+        },
+        {
+          "module": "NearlyMinimax/CardinalGlobalBandL2.lean",
+          "declaration": "globalCardinalBandMatrix_square_integral_le",
+          "qualified_declaration": "NearlyMinimax.globalCardinalBandMatrix_square_integral_le"
+        },
+        {
+          "module": "NearlyMinimax/CardinalInterpolationBias.lean",
+          "declaration": "anchored_cardinal_tail_spatial_integral_bound",
+          "qualified_declaration": "NearlyMinimax.anchored_cardinal_tail_spatial_integral_bound"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.4",
+      "paper_label": "lem:finite-rules",
+      "title": "Finite exterior, derivative, quadratic and covariance rules",
+      "source_file": "paper/body.tex",
+      "source_line": 2950,
+      "scope_label": "Quantitative targets in separate parts",
+      "scope_notes": "Quantitative targets in separate parts. Exterior polynomial exactness and exact cosh total variation; largest odd derivative order and exactness through D; fixed quadratic-coefficient rule; covariance support, mass/mean/second moment, variation and linearity. Symmetry and positive frame normalization are explicit as required.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/AtomicVariation.lean",
+          "declaration": "exteriorSignedRule_totalVariation",
+          "qualified_declaration": "NearlyMinimax.exteriorSignedRule_totalVariation"
+        },
+        {
+          "module": "NearlyMinimax/AtomicVariation.lean",
+          "declaration": "derivativeSignedRule_totalVariation",
+          "qualified_declaration": "NearlyMinimax.derivativeSignedRule_totalVariation"
+        },
+        {
+          "module": "NearlyMinimax/AtomicVariation.lean",
+          "declaration": "covarianceSignedRule_integral",
+          "qualified_declaration": "NearlyMinimax.covarianceSignedRule_integral"
+        },
+        {
+          "module": "NearlyMinimax/AtomicVariation.lean",
+          "declaration": "covarianceSignedRule_totalVariation_le",
+          "qualified_declaration": "NearlyMinimax.covarianceSignedRule_totalVariation_le"
+        },
+        {
+          "module": "NearlyMinimax/AtomicVariation.lean",
+          "declaration": "covarianceWeight_smul",
+          "qualified_declaration": "NearlyMinimax.covarianceWeight_smul"
+        },
+        {
+          "module": "NearlyMinimax/AtomicRules.lean",
+          "declaration": "exteriorSignedRule_exact",
+          "qualified_declaration": "NearlyMinimax.exteriorSignedRule_exact"
+        },
+        {
+          "module": "NearlyMinimax/AtomicRules.lean",
+          "declaration": "derivativeSignedRule_exact",
+          "qualified_declaration": "NearlyMinimax.derivativeSignedRule_exact"
+        },
+        {
+          "module": "NearlyMinimax/MomentRules.lean",
+          "declaration": "response_rule_exact",
+          "qualified_declaration": "NearlyMinimax.response_rule_exact"
+        },
+        {
+          "module": "NearlyMinimax/MomentRules.lean",
+          "declaration": "covariance_second_moment_symmetric",
+          "qualified_declaration": "NearlyMinimax.covariance_second_moment_symmetric"
+        },
+        {
+          "module": "NearlyMinimax/MomentRules.lean",
+          "declaration": "covarianceAtom_mem_ball",
+          "qualified_declaration": "NearlyMinimax.covarianceAtom_mem_ball"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.5",
+      "paper_label": "lem:local-operator",
+      "title": "Local tensor realization, guarded counts and all-count response bounds",
+      "source_file": "paper/body.tex",
+      "source_line": 3036,
+      "scope_label": "Quantitative all-count target; components for the full row lemma",
+      "scope_notes": "Quantitative all-count target; components for the full row lemma. Actual tensor/action/count identity. Arbitrary finite signed updates with measurable legal resets and conditional bounded-Borel affine annihilation have the exact `2*C_q*k²*pPlus^k*eta²*variation` bound, with no frame-dimension factor. The covariance/Hessian exactness is for degree ≤2; the response remainder is separately bounded through the fixed higher Taylor order, as stated in the manuscript.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/HighSeparatedRows.lean",
+          "declaration": "highSeparatedPacketAction_count_selector",
+          "qualified_declaration": "NearlyMinimax.highSeparatedPacketAction_count_selector"
+        },
+        {
+          "module": "NearlyMinimax/GenericSignedLocalOperator.lean",
+          "declaration": "signed_local_operator_all_count_paper_bound",
+          "qualified_declaration": "NearlyMinimax.signed_local_operator_all_count_paper_bound"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.6",
+      "paper_label": "lem:hyperplane",
+      "title": "Finite bounded hyperplane field and two-pair moment bound",
+      "source_file": "paper/body.tex",
+      "source_line": 3163,
+      "scope_label": "Quantitative target, alternative construction",
+      "scope_notes": "Quantitative target, alternative construction. Joint Borel fair-cell field law, exact exponential Euclidean covariance, odd-moment cancellation and true higher-moment L2 bound `C^j*j^4/T^d`. Gaussian-normal hyperplane intensity, normalized by `2*d*gaussianAbsoluteMean`, replaces the paper's uniform sphere normals; exact separation probabilities give the same covariance.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/HigherFieldMomentL2.lean",
+          "declaration": "boundedHyperplaneSpatialMoment_L2_le",
+          "qualified_declaration": "NearlyMinimax.boundedHyperplaneSpatialMoment_L2_le"
+        },
+        {
+          "module": "NearlyMinimax/BoundedHyperplaneField.lean",
+          "declaration": "boundedHyperplaneFieldLaw_measurable",
+          "qualified_declaration": "NearlyMinimax.boundedHyperplaneFieldLaw_measurable"
+        },
+        {
+          "module": "NearlyMinimax/BoundedHyperplaneField.lean",
+          "declaration": "boundedHyperplaneFieldValue_measurable",
+          "qualified_declaration": "NearlyMinimax.boundedHyperplaneFieldValue_measurable"
+        },
+        {
+          "module": "NearlyMinimax/BoundedHyperplaneField.lean",
+          "declaration": "boundedHyperplaneField_covariance",
+          "qualified_declaration": "NearlyMinimax.boundedHyperplaneField_covariance"
+        },
+        {
+          "module": "NearlyMinimax/BoundedHyperplaneField.lean",
+          "declaration": "boundedHyperplaneField_odd_moment",
+          "qualified_declaration": "NearlyMinimax.boundedHyperplaneField_odd_moment"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.7",
+      "paper_label": "lem:new-pair",
+      "title": "Pair activity, selected cancellation and higher terms",
+      "source_file": "paper/body.tex",
+      "source_line": 3247,
+      "scope_label": "Quantitative pair-norm targets; construction components",
+      "scope_notes": "Quantitative pair-norm targets; construction components. Literal nuisance suprema before integration, pair alias zero through M, exact factorial alias tail and both field-energy inequalities. Count-two radial identity is actual source action; its spatial bound includes every N≥1. The frame guard F≥3 preserves the surrounding paper's D≥3 requirement for its quadratic pair kernel.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/FinePairNuisanceNorm.lean",
+          "declaration": "finePairNuisanceEnergy_integrable_and_bound",
+          "qualified_declaration": "NearlyMinimax.finePairNuisanceEnergy_integrable_and_bound"
+        },
+        {
+          "module": "NearlyMinimax/FinePairNuisanceNorm.lean",
+          "declaration": "finePairAliasNuisanceEnergy_zero_selected_count",
+          "qualified_declaration": "NearlyMinimax.finePairAliasNuisanceEnergy_zero_selected_count"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimePairNorm.lean",
+          "declaration": "paperLowerRegime_uniform_pair_norms",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_pair_norms"
+        },
+        {
+          "module": "NearlyMinimax/HighDefectNuisanceNorm.lean",
+          "declaration": "radialActualNuisanceNumerator_eq_polynomial",
+          "qualified_declaration": "NearlyMinimax.radialActualNuisanceNumerator_eq_polynomial"
+        },
+        {
+          "module": "NearlyMinimax/HighDefectNuisanceNorm.lean",
+          "declaration": "radialActualNuisanceEnergy_integrable_and_bound",
+          "qualified_declaration": "NearlyMinimax.radialActualNuisanceEnergy_integrable_and_bound"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.8",
+      "paper_label": "lem:centered-row",
+      "title": "Centered positive reference mark law",
+      "source_file": "paper/body.tex",
+      "source_line": 3405,
+      "scope_label": "Components; exact activation supremum checked",
+      "scope_notes": "Components; exact activation supremum checked. Absolute reference mixture and disjoint zero-weight branch, mean-zero slope/mean-one intercept, state-independent bounded activation and exact `C_ctr*B_base` supremum, including zero-mass rows. Generic union legality premises are proved by complete source guards.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/CenteredActivationSup.lean",
+          "declaration": "sourceUnionActivation_sSup_paper",
+          "qualified_declaration": "NearlyMinimax.sourceUnionActivation_sSup_paper"
+        },
+        {
+          "module": "NearlyMinimax/CompleteSourceMassAnnihilation.lean",
+          "declaration": "completeSourceMass_append_indicator_zero",
+          "qualified_declaration": "NearlyMinimax.completeSourceMass_append_indicator_zero"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.9",
+      "paper_label": "lem:score",
+      "title": "Chart ratio, conditional centering and disjoint orthogonality",
+      "source_file": "paper/body.tex",
+      "source_line": 3529,
+      "scope_label": "Components",
+      "scope_notes": "Components. Conditional identities use integration under the actual product ternary response law at each fixed design. Complete sources discharge primitive cancellation and positivity hypotheses. A single exact endpoint for the full lemma, particularly its displayed crude envelope `B_loc*(b_M/(a_M*c_q))^k+k*eta²/(a_Y²*c_q)`, was not independently checked. Other sufficient score/Fisher bounds support the final lower proof.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/HighSourceNuisanceAction.lean",
+          "declaration": "completeSourceAffineAction_eq_signed_first_action",
+          "qualified_declaration": "NearlyMinimax.completeSourceAffineAction_eq_signed_first_action"
+        },
+        {
+          "module": "NearlyMinimax/HighUnionScore.lean",
+          "declaration": "highMarkedLocalScore_centered",
+          "qualified_declaration": "NearlyMinimax.highMarkedLocalScore_centered"
+        },
+        {
+          "module": "NearlyMinimax/HighUnionScore.lean",
+          "declaration": "highMarkedLocalScore_depends_on_support",
+          "qualified_declaration": "NearlyMinimax.highMarkedLocalScore_depends_on_support"
+        },
+        {
+          "module": "NearlyMinimax/HighUnionFieldScore.lean",
+          "declaration": "highFrameMarkedScore_orthogonal",
+          "qualified_declaration": "NearlyMinimax.highFrameMarkedScore_orthogonal"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.10",
+      "paper_label": "prop:local",
+      "title": "All local cancellation, activity and energy guarantees",
+      "source_file": "paper/body.tex",
+      "source_line": 3598,
+      "scope_label": "Components of seven clauses",
+      "scope_notes": "Components of seven clauses. State legality/centering, activity, zero counts and actual defect/alias/field decomposition have supporting declarations. Separate literal component norms exist; aggregate geometry is not substituted for them. No single theorem combining the entire seven-clause paper statement was independently checked.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/HighSourceCountCancellation.lean",
+          "declaration": "completeSourceRawNumerator_count_zero",
+          "qualified_declaration": "NearlyMinimax.completeSourceRawNumerator_count_zero"
+        },
+        {
+          "module": "NearlyMinimax/HighSourceCountCancellation.lean",
+          "declaration": "completeSourceRawNumerator_count_one",
+          "qualified_declaration": "NearlyMinimax.completeSourceRawNumerator_count_one"
+        },
+        {
+          "module": "NearlyMinimax/HighSourceAllGeometry.lean",
+          "declaration": "completeSource_original_all_geometry",
+          "qualified_declaration": "NearlyMinimax.completeSource_original_all_geometry"
+        },
+        {
+          "module": "NearlyMinimax/CompleteSaddleEnergyWitness.lean",
+          "declaration": "completeSaddleGeometry_witness",
+          "qualified_declaration": "NearlyMinimax.completeSaddleGeometry_witness"
+        },
+        {
+          "module": "NearlyMinimax/HighSourceNuisanceGeometry.lean",
+          "declaration": "completeSourcePatchEnergy_all_integrable_and_bound",
+          "qualified_declaration": "NearlyMinimax.completeSourcePatchEnergy_all_integrable_and_bound"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeNormEnergy.lean",
+          "declaration": "paperLowerRegime_uniform_local_norm_energy",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_local_norm_energy"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeCenteredActivity.lean",
+          "declaration": "paperLowerRegime_uniform_centered_activity",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_centered_activity"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeAliasIdentification.lean",
+          "declaration": "paperLowerRegime_uniform_source_decomposition",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_source_decomposition"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimePairNorm.lean",
+          "declaration": "paperLowerRegime_uniform_pair_norms",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_pair_norms"
+        },
+        {
+          "module": "NearlyMinimax/GenericDefectNormEnergy.lean",
+          "declaration": "paper_generic_defect_lemma_uniform",
+          "qualified_declaration": "NearlyMinimax.paper_generic_defect_lemma_uniform"
+        },
+        {
+          "module": "NearlyMinimax/HighIntrinsicLocalBounds.lean",
+          "declaration": "highLocalFieldWithout_intrinsic_offset_guard",
+          "qualified_declaration": "NearlyMinimax.highLocalFieldWithout_intrinsic_offset_guard"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.11",
+      "paper_label": "lem:defect",
+      "title": "Interpolation and fixed-rule Taylor defect energy",
+      "source_file": "paper/body.tex",
+      "source_line": 3666,
+      "scope_label": "Quantitative target",
+      "scope_notes": "Quantitative target. Count-two-through-D factorial sum bounded by `C5*eta^4*mu²*N^-d` under primitive N/mu/log-N/amplitude/Taylor guards; no Reg(K) or desired energy premise. C5 precedes varying frame/selector/density margins and tuple; the density upper cap/frame constant/score coefficient stay fixed. F≥3 and D≤F are explicit; specialize F=D≥3 for the pair construction. Physical nu and one heat correction are retained, including empty scales.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/HighSourceHigherGeometry.lean",
+          "declaration": "completeSourceRawNumerator_higher_square_le_geometry",
+          "qualified_declaration": "NearlyMinimax.completeSourceRawNumerator_higher_square_le_geometry"
+        },
+        {
+          "module": "NearlyMinimax/HighSourceHigherGeometry.lean",
+          "declaration": "completeSourceHigherGeometryEnvelope_integrable",
+          "qualified_declaration": "NearlyMinimax.completeSourceHigherGeometryEnvelope_integrable"
+        },
+        {
+          "module": "NearlyMinimax/HighDefectNuisanceNorm.lean",
+          "declaration": "radialActualNuisanceEnergy_integrable_and_bound",
+          "qualified_declaration": "NearlyMinimax.radialActualNuisanceEnergy_integrable_and_bound"
+        },
+        {
+          "module": "NearlyMinimax/HighDefectNuisanceNorm.lean",
+          "declaration": "cardinalActualNuisanceEnergy_integrable_and_le_geometry",
+          "qualified_declaration": "NearlyMinimax.cardinalActualNuisanceEnergy_integrable_and_le_geometry"
+        },
+        {
+          "module": "NearlyMinimax/HighDefectNuisanceNorm.lean",
+          "declaration": "cardinalActualNuisanceEnergy_integrable_and_bound",
+          "qualified_declaration": "NearlyMinimax.cardinalActualNuisanceEnergy_integrable_and_bound"
+        },
+        {
+          "module": "NearlyMinimax/GenericDefectNormEnergy.lean",
+          "declaration": "cardinalDefectPolynomial_max_eq_physical",
+          "qualified_declaration": "NearlyMinimax.cardinalDefectPolynomial_max_eq_physical"
+        },
+        {
+          "module": "NearlyMinimax/GenericDefectNormEnergy.lean",
+          "declaration": "paper_generic_defect_lemma",
+          "qualified_declaration": "NearlyMinimax.paper_generic_defect_lemma"
+        },
+        {
+          "module": "NearlyMinimax/GenericDefectNormEnergy.lean",
+          "declaration": "paper_generic_defect_lemma_uniform",
+          "qualified_declaration": "NearlyMinimax.paper_generic_defect_lemma_uniform"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.12",
+      "paper_label": "lem:activity",
+      "title": "Global local activity without an M-polynomial loss",
+      "source_file": "paper/body.tex",
+      "source_line": 3746,
+      "scope_label": "Quantitative target",
+      "scope_notes": "Quantitative target. Actual source variation and centered activation have fixed `C_B*N²*exp(tau_M*M)` bounds. The final estimate has no additional polynomial-in-M multiplier.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeHierarchy.lean",
+          "declaration": "paperLowerRegime_uniform_hierarchy",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_hierarchy"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeSource.lean",
+          "declaration": "paperLowerRegime_uniform_activity",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_activity"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeCenteredActivity.lean",
+          "declaration": "paperLowerRegime_uniform_centered_activity",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_centered_activity"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.13",
+      "paper_label": "lem:alias",
+      "title": "Cardinal and pair alias factorial tail",
+      "source_file": "paper/body.tex",
+      "source_line": 3767,
+      "scope_label": "Quantitative norm target and source identification",
+      "scope_notes": "Quantitative norm target and source identification. Exact `eta^4*exp(2*tau_M*M)*N^(4-d)*(C6*mu)^(M+1)/(M+1)!` shape with nuisance supremum before integration. Actual aliases are pair and ordinary fine aliases and vanish through M. Infinite alias-tail results are additional formal results.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeAliasNorm.lean",
+          "declaration": "paperLowerRegime_uniform_alias_norm_tail",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_alias_norm_tail"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeAliasIdentification.lean",
+          "declaration": "paperRegimeAliasRawAction_zero_through_resolution",
+          "qualified_declaration": "NearlyMinimax.paperRegimeAliasRawAction_zero_through_resolution"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeAliasIdentification.lean",
+          "declaration": "paperRegimeAliasRawAction_eq_actual_aliases",
+          "qualified_declaration": "NearlyMinimax.paperRegimeAliasRawAction_eq_actual_aliases"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeAliasIdentification.lean",
+          "declaration": "paperLowerRegime_uniform_source_decomposition",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_source_decomposition"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.14",
+      "paper_label": "lem:positive-realization",
+      "title": "Positive path, raw transport and concentrated mass tilt",
+      "source_file": "paper/body.tex",
+      "source_line": 3833,
+      "scope_label": "Components",
+      "scope_notes": "Components. Actual marked histories and positive probability priors, append transport, invariant mass law, mean-one/MGF bounds, true mass tilt and exceptional tail. Generic boundedness/measurability/positivity/concentration hypotheses are discharged for the source. The inspected ordinary derivative endpoint is for `0<t<T`; endpoint behavior/product-rule infrastructure was not reassembled into one exact numbered statement.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/HighUnionSourceConcentration.lean",
+          "declaration": "highUnionSourceMass_reference_mean_one",
+          "qualified_declaration": "NearlyMinimax.highUnionSourceMass_reference_mean_one"
+        },
+        {
+          "module": "NearlyMinimax/HighUnionSourceConcentration.lean",
+          "declaration": "highUnionSourceMass_reference_mgf",
+          "qualified_declaration": "NearlyMinimax.highUnionSourceMass_reference_mgf"
+        },
+        {
+          "module": "NearlyMinimax/CompleteSourceMassAnnihilation.lean",
+          "declaration": "completeSourceMass_append_indicator_zero",
+          "qualified_declaration": "NearlyMinimax.completeSourceMass_append_indicator_zero"
+        },
+        {
+          "module": "NearlyMinimax/HistoryPriorWeakTransport.lean",
+          "declaration": "historyMarkedPrior_weak_transport",
+          "qualified_declaration": "NearlyMinimax.historyMarkedPrior_weak_transport"
+        },
+        {
+          "module": "NearlyMinimax/CompleteSourceInvariantMass.lean",
+          "declaration": "completeSourcePrior_probability",
+          "qualified_declaration": "NearlyMinimax.completeSourcePrior_probability"
+        },
+        {
+          "module": "NearlyMinimax/CompleteSourceInvariantMass.lean",
+          "declaration": "completeSourceMass_prior_law",
+          "qualified_declaration": "NearlyMinimax.completeSourceMass_prior_law"
+        },
+        {
+          "module": "NearlyMinimax/HighMassTilt.lean",
+          "declaration": "massPowerTilt_isProbability",
+          "qualified_declaration": "NearlyMinimax.massPowerTilt_isProbability"
+        },
+        {
+          "module": "NearlyMinimax/HighMassTilt.lean",
+          "declaration": "massPowerTilt_massLaw_eq",
+          "qualified_declaration": "NearlyMinimax.massPowerTilt_massLaw_eq"
+        },
+        {
+          "module": "NearlyMinimax/MassTiltTail.lean",
+          "declaration": "massPowerTilt_abs_tail",
+          "qualified_declaration": "NearlyMinimax.massPowerTilt_abs_tail"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.15",
+      "paper_label": "lem:score-risk",
+      "title": "Risk lower bound from local cost",
+      "source_file": "paper/body.tex",
+      "source_line": 4046,
+      "scope_label": "Quantitative target",
+      "scope_notes": "Quantitative target. Intrinsic C_fr, exact rho/2^(d+1) cap, `C_sharp=1/(pLower²*cq)`, actual infinite compact-nuisance norm series and true h^d chart factor. The conclusion bounds MSE, the square of paper RMS, with original variance-width exceptional penalty. Norm finiteness/Fisher/path transfer are proved internally. Positive transfer constant precedes U and all sample/construction parameters.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/PaperScorePathOriginal.lean",
+          "declaration": "paper_score_to_risk_original_interval",
+          "qualified_declaration": "NearlyMinimax.paper_score_to_risk_original_interval"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerSharp.lean",
+          "declaration": "paper_lower_sharp",
+          "qualified_declaration": "NearlyMinimax.paper_lower_sharp"
+        },
+        {
+          "module": "NearlyMinimax/HighPatchChartExact.lean",
+          "declaration": "highLocalCoordinates_patch_map_le_exact",
+          "qualified_declaration": "NearlyMinimax.highLocalCoordinates_patch_map_le_exact"
+        },
+        {
+          "module": "NearlyMinimax/HighPatchProductExact.lean",
+          "declaration": "highPatchProductChart_integral_le_exact",
+          "qualified_declaration": "NearlyMinimax.highPatchProductChart_integral_le_exact"
+        },
+        {
+          "module": "NearlyMinimax/HighFrameDesignExact.lean",
+          "declaration": "high_frame_complete_design_spatial_series_exact",
+          "qualified_declaration": "NearlyMinimax.high_frame_complete_design_spatial_series_exact"
+        },
+        {
+          "module": "NearlyMinimax/HighUnionRawFisherExact.lean",
+          "declaration": "highUnionSource_raw_fisher_bound_exact",
+          "qualified_declaration": "NearlyMinimax.highUnionSource_raw_fisher_bound_exact"
+        },
+        {
+          "module": "NearlyMinimax/HighExactSourceEnergy.lean",
+          "declaration": "highSourceSpatialSeriesExact_literal_energy_le",
+          "qualified_declaration": "NearlyMinimax.highSourceSpatialSeriesExact_literal_energy_le"
+        },
+        {
+          "module": "NearlyMinimax/ExactSourceCompactEnergy.lean",
+          "declaration": "exactSourceCompactEnvelope_integral_eq",
+          "qualified_declaration": "NearlyMinimax.exactSourceCompactEnvelope_integral_eq"
+        },
+        {
+          "module": "NearlyMinimax/ExactSourceCompactEnergy.lean",
+          "declaration": "exactSourceLiteralEnergy_summable",
+          "qualified_declaration": "NearlyMinimax.exactSourceLiteralEnergy_summable"
+        },
+        {
+          "module": "NearlyMinimax/SourceIncomingNuisance.lean",
+          "declaration": "completeSourceIncomingRawEnergy_le_exactEnvelope",
+          "qualified_declaration": "NearlyMinimax.completeSourceIncomingRawEnergy_le_exactEnvelope"
+        },
+        {
+          "module": "NearlyMinimax/SourceIntrinsicScoreLegality.lean",
+          "declaration": "highUnionSource_intrinsic_ternary_floor",
+          "qualified_declaration": "NearlyMinimax.highUnionSource_intrinsic_ternary_floor"
+        },
+        {
+          "module": "NearlyMinimax/SourceIntrinsicScoreLegality.lean",
+          "declaration": "highUnionSource_intrinsic_original_model_uniform",
+          "qualified_declaration": "NearlyMinimax.highUnionSource_intrinsic_original_model_uniform"
+        },
+        {
+          "module": "NearlyMinimax/HighCompleteIntrinsicCostExact.lean",
+          "declaration": "highCompleteSource_intrinsic_cost_risk_exact",
+          "qualified_declaration": "NearlyMinimax.highCompleteSource_intrinsic_cost_risk_exact"
+        },
+        {
+          "module": "NearlyMinimax/PaperScoreRisk.lean",
+          "declaration": "paper_score_risk",
+          "qualified_declaration": "NearlyMinimax.paper_score_risk"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.16",
+      "paper_label": "lem:raw-energy",
+      "title": "Finite-n cost of all local residual branches",
+      "source_file": "paper/body.tex",
+      "source_line": 4123,
+      "scope_label": "Quantitative target",
+      "scope_notes": "Quantitative target. Actual convergent infinite norm series and exact B²+E1+E2+E3 cost, including M/(M+1)! and D/(D+1)! tail powers, eta=cf*h^s and mu=n*h^d. Fixed C_G and threshold precede the whole tuple/grid. The free score coefficient is specialized to the paper's C_sharp.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/HighSourceAllGeometry.lean",
+          "declaration": "completeSource_original_all_geometry",
+          "qualified_declaration": "NearlyMinimax.completeSource_original_all_geometry"
+        },
+        {
+          "module": "NearlyMinimax/CompleteSaddleEnergyWitness.lean",
+          "declaration": "completeSaddleGeometry_witness",
+          "qualified_declaration": "NearlyMinimax.completeSaddleGeometry_witness"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeNormEnergy.lean",
+          "declaration": "paperLowerRegime_uniform_local_norm_energy",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_local_norm_energy"
+        },
+        {
+          "module": "NearlyMinimax/RawCostAlgebra.lean",
+          "declaration": "raw_energy_cost_bound",
+          "qualified_declaration": "NearlyMinimax.raw_energy_cost_bound"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeInfiniteEnergy.lean",
+          "declaration": "paperLowerRegime_uniform_local_norm_infinite_energy",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_local_norm_infinite_energy"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeRawCost.lean",
+          "declaration": "paperRegimeRawCostConstant_ge_one",
+          "qualified_declaration": "NearlyMinimax.paperRegimeRawCostConstant_ge_one"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerRegimeRawCost.lean",
+          "declaration": "paperLowerRegime_uniform_raw_cost",
+          "qualified_declaration": "NearlyMinimax.paperLowerRegime_uniform_raw_cost"
+        }
+      ]
+    },
+    {
+      "paper_number": "6.17",
+      "paper_label": "lem:saddle",
+      "title": "Saddle legality, three costs, exact rate and exceptional tail",
+      "source_file": "paper/body.tex",
+      "source_line": 4211,
+      "scope_label": "Quantitative asymptotic targets; discharge chain checked",
+      "scope_notes": "Quantitative asymptotic targets; discharge chain checked. Rounded parameters satisfy regime guards eventually and have the exact risk stretch constant/log power. Generic exponent/cost budget premises are supplied by actual source constructions in the final proof. The final lower rate uses a sufficient larger frame/cutoff and conservative chart route; the separate intrinsic exact local-cost theorem is not an unproved premise.",
+      "endpoints": [
+        {
+          "module": "NearlyMinimax/LowerSaddle.lean",
+          "declaration": "eventually_lowerSaddleReg",
+          "qualified_declaration": "NearlyMinimax.eventually_lowerSaddleReg"
+        },
+        {
+          "module": "NearlyMinimax/LowerSaddle.lean",
+          "declaration": "eventually_actual_lowerSaddle_numeric_cost",
+          "qualified_declaration": "NearlyMinimax.eventually_actual_lowerSaddle_numeric_cost"
+        },
+        {
+          "module": "NearlyMinimax/LowerSaddle.lean",
+          "declaration": "actual_lowerSaddleRisk_rate_bracket",
+          "qualified_declaration": "NearlyMinimax.actual_lowerSaddleRisk_rate_bracket"
+        },
+        {
+          "module": "NearlyMinimax/PaperLowerSharp.lean",
+          "declaration": "paper_lower_sharp",
+          "qualified_declaration": "NearlyMinimax.paper_lower_sharp"
+        }
+      ]
+    }
+  ]
+}

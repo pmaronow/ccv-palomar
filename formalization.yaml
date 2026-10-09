@@ -1,0 +1,186 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/99c678e569c7c4c0772db297c5ddd5e4c9b6322e/schema/formalization.schema.json
+version: v0.4
+
+project:
+  name: Nearly minimax variance estimation under rough random design
+  description: >-
+    Minimax root-mean-square bounds for estimating a constant conditional
+    variance from independent random-design regression observations. The
+    design density has fixed positive lower and upper bounds but no smoothness;
+    covariate-dependent errors have uniformly bounded conditional fourth
+    moments. For 1 < s < d/4, the proved bracket identifies the polynomial
+    exponent 2(s+1)/(d+4) and the common explicit stretched-exponential factor,
+    with a remaining logarithmic gap. It also proves the exponent corollary,
+    the exact low-smoothness rate, and the parametric regime.
+  authors: [P. M. Aronow, Patrick Lopatto]
+  responsible_maintainers: [P. M. Aronow, Patrick Lopatto]
+  license: MIT
+
+classification:
+  arxiv: [math.ST, stat.TH]
+  msc2020: [62G05, 62G08, 62G20, 62C20]
+
+sources:
+  - title: Nearly Minimax Variance Estimation Under Rough Random Design
+    authors: [P. M. Aronow, Patrick Lopatto]
+    id: hexagon:2610.00162v1
+    type: paper
+    location: paper/main.tex
+    relationship: formalizes
+    license: unknown
+    note: >-
+      The supplied Hexagon manuscript, including the revised local-operator
+      lemma, is authoritative. The earlier arXiv:2607.13170v3 has weaker
+      bounds and is not substituted for it. No source-author endorsement or
+      human mathematical review is inferred from project authorship.
+
+related_formalizations:
+  - id: RoughRegime reusable development bundled in Vendor/RoughRegime
+    relationship: builds-on
+    note: >-
+      Twenty-nine reused modules plus an umbrella support the proof. Their
+      different statistical model is not substituted for NearlyMinimax's
+      conclusions. Original source hashes and compatibility modifications
+      are recorded in docs/vendor-provenance.json. These sources are covered
+      by the explicitly designated MIT license; no separate upstream license
+      notices were supplied, and all existing comments are retained.
+
+status:
+  scope: >-
+    Comparator selects Theorem 1.1, both conclusions of Corollary 1.2,
+    Theorem 1.3, and Theorem 1.4 as five declarations. Challenge gives concrete
+    model and risk definitions with five intentional theorem placeholders;
+    Solution supplies their proofs. The main bracket quantifies its constants
+    and threshold before the extension domain. The other regimes fix that
+    domain. Auxiliary infrastructure and further proved consequences are
+    retained; a complete literal formalization of every auxiliary paper
+    clause is not asserted. The exact logarithmic power remains unknown,
+    and no optimized constants or moderate-sample performance are claimed.
+    Pointwise Hölder suprema are bridged to essential suprema; ambient
+    representatives are bridged to cube-defined parameters. See docs/FIDELITY.md
+    and docs/COVERAGE.md for alternative constructions and precise scope.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+  main_results:
+    - declaration: NearlyMinimax.Submission.paper_main
+      file: Solution.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+      literature_dependencies: []
+    - declaration: NearlyMinimax.Submission.exponent_limit
+      file: Solution.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+      literature_dependencies: []
+    - declaration: NearlyMinimax.Submission.polynomial_bounds
+      file: Solution.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+      literature_dependencies: []
+    - declaration: NearlyMinimax.Submission.low_smoothness
+      file: Solution.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+      literature_dependencies: []
+    - declaration: NearlyMinimax.Submission.parametric
+      file: Solution.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+      literature_dependencies: []
+
+automation:
+  methods:
+    - method: autonomous
+      models: [Sol 6.1]
+      framework: AI-assisted Lean autoformalization
+      tool_setup: Original substantive proof development autoformalized in Lean with Mathlib.
+      cost:
+        wall_time: not tracked
+        spend_usd: not tracked
+        hardware: not recorded
+      prompting_notes: Original prompting history not supplied.
+    - method: agent
+      models: [GPT-6 (Codex)]
+      framework: Codex
+      tool_setup: >-
+        Subsequent local repository preparation, independent Challenge and
+        Solution interface, Lean and Mathlib compatibility work, parallel
+        automated statement review, axiom audits, and mechanical verification.
+      cost:
+        wall_time: not tracked
+        spend_usd: not tracked
+        hardware: managed Linux execution environment
+      prompting_notes: >-
+        Prepare a local public-facing source package, preserve mathematical
+        statements, distinguish source documents from instructions, verify
+        current Palomar requirements, and disclose remaining gaps separately.
+  spend_usd: not tracked
+  notes: >-
+    The original autoformalization and subsequent Codex preparation are
+    separate stages. Human project authorship and maintainer responsibility
+    do not establish human review of the formalization. No publishing,
+    Palomar submission, or registration was performed.
+
+fidelity:
+  divergences: >-
+    Concrete encoding uses pointwise Hölder suprema and ambient measurable
+    representatives, with equivalence bridges in the development. Explicit
+    conditional moment integrability is stated. Corollary polynomial-bound
+    constants precede epsilon, strengthening its displayed quantifier order
+    while permitting the eventual threshold to depend on epsilon. Alternative
+    lower-bound constructions include a Gaussian-normal hyperplane field
+    and a signed tagged-band realization; these are detailed in docs/COVERAGE.md.
+    Selected headline statements are checked separately from auxiliary
+    conditional lemmas and proposition-valued targets. No full-paper literal
+    equivalence or human mathematical review is claimed.
+
+review:
+  status: automated statement and mechanical review; no human mathematical review established
+  reviewers: [Codex automated preparation agents]
+  notes: >-
+    The headline definitions, hypotheses, quantifiers, normalization, domains,
+    and conclusions were compared with the supplied paper. Auxiliary exact
+    targets and alternative routes were examined separately. Mechanical
+    evidence, including whether each build and independent kernel replay
+    completed, is revision-bound in docs/VERIFICATION.md. Compilation and
+    kernel acceptance do not establish source fidelity or human review.
+
+alignment:
+  namespace: NearlyMinimax.Submission
+  statements:
+    - source: Theorem 1.1 (thm:main / thm:bracket)
+      lean: NearlyMinimax.Submission.paper_main
+      module: Solution
+      status: proved
+      note: RMS bracket with exact Psi and Gamma; constants and threshold uniform over open extension domains.
+    - source: Corollary 1.2 (thm:exponent), limit conclusion
+      lean: NearlyMinimax.Submission.exponent_limit
+      module: Solution
+      status: proved
+      note: Exact natural-sample-size exponent limit; ENNReal RMS is converted to a real using proved finiteness.
+    - source: Corollary 1.2 (thm:exponent), polynomial brackets
+      lean: NearlyMinimax.Submission.polynomial_bounds
+      module: Solution
+      status: proved
+      note: Constants precede epsilon; the eventual threshold may depend on epsilon.
+    - source: Theorem 1.3 (thm:main2)
+      lean: NearlyMinimax.Submission.low_smoothness
+      module: Solution
+      status: proved
+      note: For all n >= 1, with 0 < s built into ModelConstants and s <= 1 explicit.
+    - source: Theorem 1.4 (thm:parametric)
+      lean: NearlyMinimax.Submission.parametric
+      module: Solution
+      status: proved
+      note: For s > 1 and d <= 4s, including equality, and all n >= 1.
+
+acknowledgements: >-
+  Lean, Mathlib and its dependencies, the RoughRegime reusable development,
+  Lake Comparator, Lean's kernel, NanoDa, and con-ron. Tool and library
+  attribution is separate from mathematical authorship and review.

@@ -1,0 +1,24 @@
+name = "nearly_minimax"
+version = "0.1.0"
+fixedToolchain = true
+defaultTargets = ["NearlyMinimax", "RoughRegime", "Challenge", "Solution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "065356127b1dc0016f66b7283ce0ce2c4055aa55"
+
+[[lean_lib]]
+name = "RoughRegime"
+srcDir = "Vendor"
+
+[[lean_lib]]
+name = "NearlyMinimax"
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

@@ -1,0 +1,277 @@
+{
+  "license": "MIT",
+  "module_count": 30,
+  "note": "Reused source provenance; all existing comments retained. Compatibility preserves original bodies exactly after inserted module/public/expose headers are removed.",
+  "sources": [
+    {
+      "source": "Vendor/RoughRegime/Applications.lean",
+      "input_sha256": "c36ee534e02ce5407e125bc1e69fb710f009729f845d14e5b07f58eb0be1a11b",
+      "prepared_sha256": "643d2f084115c6342e6bee6f3a1be7df41bbae9fb77dd73587ed70baf32cf670",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.Applications"
+    },
+    {
+      "source": "Vendor/RoughRegime/Cauchy.lean",
+      "input_sha256": "920ad36df7570d24fcb71ce6ee8a80a9474a8fcb8a11d04140343713a59ba174",
+      "prepared_sha256": "85cb7ec6ff84db8cbe7ddefdb929ba1c9569f3860d65bd15363c9f3500eb20b1",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.Cauchy"
+    },
+    {
+      "source": "Vendor/RoughRegime/Centering.lean",
+      "input_sha256": "ddd37fe89c3c553d7d73050287553582eb07880c138bfa6be5dbedc3d7e8b6e3",
+      "prepared_sha256": "4514faaeac67373890be4ccc55eb8ddb87b6fb87f16304e24a1f7f190f7f937e",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.Centering"
+    },
+    {
+      "source": "Vendor/RoughRegime/CombinedAnalytic.lean",
+      "input_sha256": "ccda2ee0d5b2f85fbd8f53b2b4e85789e8cd3ffb48d5e33ec9d96e61d1fb6418",
+      "prepared_sha256": "9bea2a27e8e1a1b4d36d1b2c8b3fb47fdd6717d7022596f21acbf8abfe3fef19",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.CombinedAnalytic"
+    },
+    {
+      "source": "Vendor/RoughRegime/CombinedPolynomial.lean",
+      "input_sha256": "2f7e2158bb08080843635847cf80c2c65eab4845ffa636de00ec4b553e833556",
+      "prepared_sha256": "15b684027f455277672388e555c0d7ef1f65bd004596e95b5305a6e43f9e6849",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.CombinedPolynomial"
+    },
+    {
+      "source": "Vendor/RoughRegime/ComplexDerivativeBridge.lean",
+      "input_sha256": "7566d17369755781697c6558a5dd754343705f6250f412a4ba88e1b3d0d7c541",
+      "prepared_sha256": "09dbbece552fda3a039d07312c00faf80cc42e852d26881c8db55d107e7d3f3a",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.ComplexDerivativeBridge"
+    },
+    {
+      "source": "Vendor/RoughRegime/GeneralTesting.lean",
+      "input_sha256": "bfdf87e2c3fe53ba81f8380c64815da5b257454622dba596588e504b0b696702",
+      "prepared_sha256": "23b5812647f207a7bbddd38f1ab075bc777eaa94cc4ae806b1a6f15c6dc3850d",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.GeneralTesting"
+    },
+    {
+      "source": "Vendor/RoughRegime/HolderConstants.lean",
+      "input_sha256": "0294974bd768f8daaf9209c915a0c48d00f446e1e7f9160e7ab58b4b98362fa9",
+      "prepared_sha256": "b003aec25fffc3aad1d728de04d9cb3c08dc69f63d3a82151d85c2680e21a54d",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.HolderConstants"
+    },
+    {
+      "source": "Vendor/RoughRegime/HolderGeometry.lean",
+      "input_sha256": "c6d670cd7ecbd1c4d753321ac0a5b85c110cf48dd28f6d996dee64d0eda1796a",
+      "prepared_sha256": "6b6cc423e98404292a15699fb381dc01faf1ff574a99b0542b899d0217ae3e2f",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.HolderGeometry"
+    },
+    {
+      "source": "Vendor/RoughRegime/HolderModulus.lean",
+      "input_sha256": "06bea57ea9bf418322ed280e3f77ac3c41dc4f554bae4bbf811126e00268b97b",
+      "prepared_sha256": "816e8956edb48e134027e24ee054bc2be3024fed2fa247b2a627c97c17a4a784",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.HolderModulus"
+    },
+    {
+      "source": "Vendor/RoughRegime/HolderTaylorApproximation.lean",
+      "input_sha256": "9a624da38e842ad46349e26b96b1353b917f584f559d871cded069e90b35fdcf",
+      "prepared_sha256": "6fd52220e57e3b595a93ea4740479b677069182e43c71f526c0ee61f0d980ecb",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.HolderTaylorApproximation"
+    },
+    {
+      "source": "Vendor/RoughRegime/HolderTaylorLine.lean",
+      "input_sha256": "3e6364bc522a6d1cd59cc43461471de478638b05f99a7469b3aca38e36313f57",
+      "prepared_sha256": "405b946f1cd2cbc70a34a99cd8036b13881d3b0aa4aa353788d881206ce71428",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.HolderTaylorLine"
+    },
+    {
+      "source": "Vendor/RoughRegime/HolderTensor.lean",
+      "input_sha256": "4ae8fc24150332196a0e92d4bd60127233f64ef4b52ce86bfaa24588d4a0907a",
+      "prepared_sha256": "109c6ee49a535c3a7dee34da8055e06cb5f730d0d6145784bddda8535ddf8c69",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.HolderTensor"
+    },
+    {
+      "source": "Vendor/RoughRegime/LiftTranslation.lean",
+      "input_sha256": "011c78d4f120d7e67aaa0478658a3dfac2fcb3f12fab06526ffb4685a459275e",
+      "prepared_sha256": "ad1caf7eea16a741e3835811a2fe1348fea899ac008c0152eb15cf568b240fb8",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.LiftTranslation"
+    },
+    {
+      "source": "Vendor/RoughRegime/LiftVariance.lean",
+      "input_sha256": "b319088799b073796aeedbf620d7f17bfdf0b298359243a8b08acc9183ee0616",
+      "prepared_sha256": "cc778a08753736b1246c573d6da4b92a7f88d14caae87824e514f77984d3bc75",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.LiftVariance"
+    },
+    {
+      "source": "Vendor/RoughRegime/Lower.lean",
+      "input_sha256": "bad2542378930d613e15151dbc78f4faf26f88ddb5573b2e2b6bd52cb5172045",
+      "prepared_sha256": "61c1029667abf03fb3d18d222e2f9c1d84760d01ff9c2f600c867b12dbeea08b",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.Lower"
+    },
+    {
+      "source": "Vendor/RoughRegime/LowerMeasure.lean",
+      "input_sha256": "4f0b08a71003940a787cf51ff6ba7b981ec872b58c5687701d2ec0258c3b6b8f",
+      "prepared_sha256": "7126e18237ce997b826c9c38f411718af40537987007f69f03b84bc0cf548150",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.LowerMeasure"
+    },
+    {
+      "source": "Vendor/RoughRegime/MatrixDeterminant.lean",
+      "input_sha256": "6286dc0327fb14976dd4ef1ce2ec3b400ba70b70960d98b168b339a155494b84",
+      "prepared_sha256": "da61de05a857bdd389281067149164bad59b1572dffe686158ea9a5a9b4c3e3c",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.MatrixDeterminant"
+    },
+    {
+      "source": "Vendor/RoughRegime/MatrixKernel.lean",
+      "input_sha256": "e2ca6309744512ef31c6f845b16d22b263f5f4904d38faaef6b1a288a242725e",
+      "prepared_sha256": "e7df8f5ce1bf8cdcb7bfb261029c8d55d64a5956b5d455694e412cae16d66134",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.MatrixKernel"
+    },
+    {
+      "source": "Vendor/RoughRegime/MatrixUpper.lean",
+      "input_sha256": "72c931e4e24af82063bb48df89eb267a1dbd46fee2f0009d23e420af52a137a3",
+      "prepared_sha256": "32686f6cbc00ea84303749dffdf94725b257131e4a128c1d04bd56b0397fa04b",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.MatrixUpper"
+    },
+    {
+      "source": "Vendor/RoughRegime/Model.lean",
+      "input_sha256": "eb18270e40f68d0145dec7412b177341ba993695f5a5dbdc75f2e89c06179173",
+      "prepared_sha256": "f5882ef10635c25b32b70f8d1816a992a2bacc91d3ac4002a533e69d56df0ad5",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.Model"
+    },
+    {
+      "source": "Vendor/RoughRegime/PolynomialCells.lean",
+      "input_sha256": "7d39a10a42fa06591f2aed8d9b87820e3f796990adc458248176c8732afff3a9",
+      "prepared_sha256": "e074585a33e8cfcf519e25855f2afd0987403b074f4ef4e113debb9779c35b25",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.PolynomialCells"
+    },
+    {
+      "source": "Vendor/RoughRegime/PolynomialDerivatives.lean",
+      "input_sha256": "e98b9d177b9d976c0cafda40bc4f64d128c07e575b0cf52d88491c9a44b40aeb",
+      "prepared_sha256": "6be6160273a4a108bba666fd1e5cb060b351a98c51e4276cc134a0b5f2fffed3",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.PolynomialDerivatives"
+    },
+    {
+      "source": "Vendor/RoughRegime/Rates.lean",
+      "input_sha256": "4a67920aeeccef5340834707c6693618ffa677b4fbbbb5af97cde902b64eb2c8",
+      "prepared_sha256": "ea321516188f73521cb5200999d13e112c9e4381f4be605c5c57d87ff0c88092",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.Rates"
+    },
+    {
+      "source": "Vendor/RoughRegime/SeriesBounds.lean",
+      "input_sha256": "2b6979864c7b568d3ca01702a7935b4c55d50b7e3ab23e9af66f0e9b0b9910cd",
+      "prepared_sha256": "33689970b745c2fda32e7bc1d05e9e563cd9763e7b2ca5f7804a6a3139636135",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.SeriesBounds"
+    },
+    {
+      "source": "Vendor/RoughRegime/TaylorPolynomial.lean",
+      "input_sha256": "20d6310c4759b0f4f3581d807bc5ef2b6388d56f80836796e8b40974056806e8",
+      "prepared_sha256": "7c05fd6aca15ab31c28210be9f70140cbd42e3108a0b23cc857f2732b370d02e",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.TaylorPolynomial"
+    },
+    {
+      "source": "Vendor/RoughRegime/UniformCube.lean",
+      "input_sha256": "92e1a306ddcba3a81f031d3f78b79a8e96e8a28db677e775d28742b5644be453",
+      "prepared_sha256": "693cb8e9fef419c0e48da10901c2eda6d46999ec8ef2a41890ee357214994e1a",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.UniformCube"
+    },
+    {
+      "source": "Vendor/RoughRegime/Upper.lean",
+      "input_sha256": "e8a2b074f73dda16f12c599f7fa3628f5a28d52ef02395b45c76ac5f2efb1e05",
+      "prepared_sha256": "1fa2a06b455e7771492cbbb344c5467e7b825f4577f15cf7fe4341e2beefb812",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.Upper"
+    },
+    {
+      "source": "Vendor/RoughRegime/UpperCovariance.lean",
+      "input_sha256": "4ea54e2002d3421b3ab2758d81d1bab5527ca2b1ca93513d90b94d092e32ffb1",
+      "prepared_sha256": "57157263cbe641f21cc14b8c974d755d9cc1729043660f75b2534c8e5c56b2d2",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime.UpperCovariance"
+    },
+    {
+      "source": "Vendor/RoughRegime.lean",
+      "input_sha256": "cbf939bbd6eccf490cec78393fb34ff204e4192e84e9c35cb8f0bc184d51babb",
+      "prepared_sha256": "64268890d45aab044ced64e4d6d74285137bb5e39bc36fd2276d9a83c5b97caa",
+      "header_and_whitespace_only": true,
+      "exact_original_after_removing_migration_header": true,
+      "license": "MIT",
+      "module": "RoughRegime"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "NearlyMinimax.Submission.paper_main",
+    "NearlyMinimax.Submission.exponent_limit",
+    "NearlyMinimax.Submission.polynomial_bounds",
+    "NearlyMinimax.Submission.low_smoothness",
+    "NearlyMinimax.Submission.parametric"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

@@ -1,0 +1,22 @@
+Original NearlyMinimax code, the independent submission interface,
+Vendor/RoughRegime sources, and repository documentation are licensed under
+the root MIT LICENSE.
+
+Paper authors: P. M. Aronow and Patrick Lopatto.
+Formalization authors and responsible maintainers: P. M. Aronow and
+Patrick Lopatto.
+
+The manuscript in paper/ is reproduced as the mathematical source. Its
+publication rights are separate from the MIT software license. No manuscript
+license was contained in the supplied paper archive; no different license is
+asserted here.
+
+Vendor/RoughRegime contains reused source modules from the supplied
+formalization. No separate license or copyright notices were present in those
+supplied files. The project's licensing instruction explicitly covers these
+sources under MIT. All source comments have been retained.
+
+Externally fetched dependencies are not bundled in the distributable source
+archive. Mathlib and its dependencies retain their own licenses and notices
+when fetched; consult the pinned repositories. Lean, NanoDa, con-ron, Lake,
+and other verification tools retain their respective licenses.

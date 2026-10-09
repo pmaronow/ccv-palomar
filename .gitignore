@@ -1,0 +1,15 @@
+.lake/
+.cache/
+verification-run/
+*.olean
+*.ilean
+*.trace
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+__pycache__/
