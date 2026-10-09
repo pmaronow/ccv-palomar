@@ -21,8 +21,8 @@ def main():
     parser.add_argument("--licensee-image", help="Optional image with Palomar's pinned licensee detector")
     args = parser.parse_args()
     work = args.work_dir.resolve()
-    if work == ROOT or work in ROOT.parents:
-        parser.error("work directory must not be the source root or its ancestor")
+    if work.is_relative_to(ROOT) or ROOT.is_relative_to(work):
+        parser.error("work directory must be outside the source root and must not contain it")
     work.mkdir(parents=True, exist_ok=True)
     env = dict(os.environ)
     env.setdefault("MATHLIB_CACHE_DIR", str(work / "mathlib-cache"))
